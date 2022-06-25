@@ -1,0 +1,39 @@
+from bs4 import BeautifulSoup
+import requests
+
+class ParseChapter:
+    def __init__(self, url) -> None:
+        self.url = url 
+        self.webpage_soup = self.get_webpage()
+
+    def get_webpage(self):
+        req = requests.get(self.url)
+        soup = BeautifulSoup(req.content, 'html.parser')
+
+        return soup 
+
+    def get_chapter_paragraphs(self):
+        chapter_div = self.webpage_soup.find("div", {"id": "bookContentBody"})
+        paragraphs = []
+        for child in chapter_div.findChildren("p" , recursive=False):
+            paragraphs.append(child)
+        return paragraphs
+
+    def get_paragraph_contents(self, paragraph):
+        return paragraph.text
+
+    def get_chapter_text(self):
+        ps = self.get_chapter_paragraphs()
+        text = ''
+        for p in ps:
+            text += (self.get_paragraph_contents(p))
+            text += '\n'
+        return text
+
+    def get_next_chapter(self):
+        ankhito_div = self.webpage_soup.find("div", {"class": "ankhito center"})
+        btns = ankhito_div.findChildren('a')
+        return 'https://wikidth.net/' + btns[2].get('href')
+        
+
+
