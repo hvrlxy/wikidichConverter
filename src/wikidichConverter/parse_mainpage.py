@@ -1,3 +1,4 @@
+from ast import excepthandler
 from bs4 import BeautifulSoup
 import requests
 
@@ -13,9 +14,13 @@ class ParseMainPage:
         return soup
 
     def get_first_chapter(self):
-        read_btn = self.webpage_soup.find("a", {"class": "btn waves-effect waves-light orange-btn"})
-        return 'https://wikidth.net/' + read_btn.get('href')
+        try:
+            read_btn = self.webpage_soup.find("a", {"class": "btn waves-effect waves-light orange-btn"})
+            return 'https://wikidth.net/' + read_btn.get('href')
+        except:
+            return None
 
-#test
-obj = ParseMainPage('https://wikidth.net/truyen/xuyen-thu-tu-chan-gioi-vi-sao-nhu-the-co-Ya2smlS4CFNOCent#!')
-print(obj.get_first_chapter())
+    def get_book_name(self):
+        cover_info = self.webpage_soup.find("div", {"class": "cover-info"})
+        h2 = cover_info.findChildren("h2")
+        return h2[0].text

@@ -30,10 +30,14 @@ class ParseChapter:
             text += '\n'
         return text
 
-    def get_next_chapter(self):
+    def get_next_chapter(self, index):
         ankhito_div = self.webpage_soup.find("div", {"class": "ankhito center"})
         btns = ankhito_div.findChildren('a')
-        return 'https://wikidth.net/' + btns[2].get('href')
+        print(btns)
+        try:
+            return 'https://wikidth.net/' + btns[index].get('href')
+        except:
+            return None
         
 
 
