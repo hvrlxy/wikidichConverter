@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
+import random
+from time import sleep
 
 class ParseChapter:
     def __init__(self, url) -> None:
@@ -31,6 +33,8 @@ class ParseChapter:
         return text
 
     def get_next_chapter(self, index):
+        list1 = [3, 4, 5, 6]
+        sleep(random.choice(list1))
         ankhito_div = self.webpage_soup.find("div", {"class": "ankhito center"})
         btns = ankhito_div.findChildren('a')
         print(btns)
