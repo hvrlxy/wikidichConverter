@@ -1,7 +1,7 @@
 from wikidichConverter.parse_chapter import *
 import pytest
 
-chapter_text = open('test_cases/test_chapter_text.txt', 'r').read()
+chapter_text = open('test_cases/chapter_text.txt', 'r').read()
 
 def test_chapter_text():
     url  = 'https://wikidth.net/truyen/xuyen-thu-tu-chan-gioi-vi-sao-nhu-the-co/chuong-35-chuong-35-YcT1HsQsRFqxnmY4'
