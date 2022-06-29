@@ -1,6 +1,6 @@
-import parse_mainpage
-import generate_pdf
-import parse_chapter
+import wikidichConverter.parse_mainpage
+import wikidichConverter.generate_pdf
+import wikidichConverter.parse_chapter
 
 def get_all_chapter(url: str):
     '''
