@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/test/__init__.py
+src/test/test_chapter.py
+src/test/test_mainpage.py
+src/wikidichConverter/__init__.py
+src/wikidichConverter/convert.py
+src/wikidichConverter/generate_pdf.py
+src/wikidichConverter/parse_chapter.py
+src/wikidichConverter/parse_mainpage.py
+src/wikidichConverter.egg-info/PKG-INFO
+src/wikidichConverter.egg-info/SOURCES.txt
+src/wikidichConverter.egg-info/dependency_links.txt
+src/wikidichConverter.egg-info/top_level.txt

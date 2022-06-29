@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: wikidichConverter
+Version: 0.0.5
+Summary: Python Package that convert wikidich books to PDF files
+Home-page: https://github.com/hvrlxy/wikidichConverter
+Author: Ha Le
+Author-email: le.ha1@northeastern.edu
+Project-URL: Bug Tracker, https://github.com/hvrlxy/wikidichConverter/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# wikidichConverter
+
+This is a program to crawl book's content from wikidich.net provided the link of the book, and convert all chapters into a pdf file.
