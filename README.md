@@ -1,6 +1,6 @@
 # wikidichConverter
 
-This is a program to crawl book's content from [wikidich](wikidth.net] provided the link of the book, and convert all chapters into a pdf file.
+This is a program to crawl book's content from [wikidth.net](https://wikidth.net/) provided the link of the book, and convert all chapters into a pdf file.
 
 ## Download the package
 Currently, the package is only available in TestPyPi. To download the package from the command line, use the command below:
