@@ -9,6 +9,8 @@ Currently, the package is only available in TestPyPi. To download the package fr
 python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ wikidichConverter
 ```
 
+The web version of the package is accessible [here](https://test.pypi.org/project/wikidichConverter/).
+
 ## How to use it?
 
 Currently, the package only support one function, converting the book url into a pdf file containing all the chapters. For example, to crawl all the content of [this](https://wikidth.net/truyen/su-tinh-nhung-dai-YhmIvTu2615a1j5G) book, we can use the convert_pdf() function, and provide the url of the book we want to crawl, and the path we want to store the pdf in.
