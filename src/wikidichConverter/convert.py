@@ -1,6 +1,7 @@
 from wikidichConverter.parse_mainpage import *
-from wikidichConverter.generate_pdf import *
+from wikidichConverter.generate_files import *
 from wikidichConverter.parse_chapter import *
+import os
 
 def get_all_chapter(url: str):
     '''
@@ -19,14 +20,33 @@ def get_all_chapter(url: str):
         # print(chapter_url)
     return chapter_text_lst
 
-def convert_pdf(book_url: str, file_path: str):
+def convert_pdf(markdown_path: str, output_file: str):
     '''
     Convert a book url to a pdf file
     book_url: str
     file_path: str
     '''
 
+    os.system(f"pandoc --pdf-engine=xelatex -V CKJmainfont=arial {markdown_path} -o {output_file}")  
+
+
+def convert_md(book_url: str, markdown_path: str):
+    '''
+    Convert a book url to a md file
+    book_url: str
+    file_path: str
+    '''
+
     book_name = ParseMainPage(book_url).get_book_name() # get the book name
     chapter_text_lst = get_all_chapter(book_url) # get all chapter text
-    obj = GeneratePDF(chapter_text_lst, book_name) # generate the pdf file
-    obj.save_pdf(file_path)
+    obj = GenerateFile(chapter_text_lst, book_name) # generate the md file
+    obj.save_md(markdown_path)
+
+def convert_epub(markdown_path: str, file_path: str):
+    '''
+    Convert a book url to a epub file
+    book_url: str
+    file_path: str
+    '''
+
+    pypandoc.convert_file(markdown_path, 'epub', outputfile=file_path)

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: wikidichConverter
-Version: 0.0.5
+Version: 0.1.3
 Summary: Python Package that convert wikidich books to PDF files
 Home-page: https://github.com/hvrlxy/wikidichConverter
 Author: Ha Le

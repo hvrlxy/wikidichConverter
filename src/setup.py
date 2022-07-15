@@ -11,5 +11,6 @@ setup(
     url='https://github.com/hvrlxy/wikidichConverter',
     author='Ha Le',
     author_email='le.ha1@northeastern.edu',
+    setup_requires=['setuptools_scm'],
     include_package_data=True
 )

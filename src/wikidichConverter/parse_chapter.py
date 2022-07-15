@@ -61,7 +61,7 @@ class ParseChapter:
         return: str
         '''
 
-        list1 = [3, 4, 5, 6] # list of index of random time, used to prevent the bot from being blocked
+        list1 = [1,2,3,4] # list of index of random time, used to prevent the bot from being blocked
         sleep(random.choice(list1)) # sleep for a random time
         ankhito_div = self.webpage_soup.find("div", {"class": "ankhito center"}) # find the div that contains the next chapter
         btns = ankhito_div.findChildren('a') # find all the buttons in the div

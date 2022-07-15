@@ -7,7 +7,7 @@ src/test/test_chapter.py
 src/test/test_mainpage.py
 src/wikidichConverter/__init__.py
 src/wikidichConverter/convert.py
-src/wikidichConverter/generate_pdf.py
+src/wikidichConverter/generate_files.py
 src/wikidichConverter/parse_chapter.py
 src/wikidichConverter/parse_mainpage.py
 src/wikidichConverter.egg-info/PKG-INFO
