@@ -1,6 +1,6 @@
 # wikidichConverter
 
-This is a program to crawl book's content from [wikidth.net](https://wikidth.net/) provided the link of the book, and convert all chapters into a pdf file.
+This is a program to crawl book's content from [wikidth.net](https://wikidth.net/) provided the link of the book, and convert all chapters into a pdf or ebook file. Current, this package supports Markdown, PDF and EPUB format.
 
 ## Download the package
 Currently, the package is only available in TestPyPi. To download the package from the command line, use the command below:
@@ -18,7 +18,12 @@ Currently, the package only support one function, converting the book url into a
 ```
 from wikidichConverter.convert import *
 
-convert_pdf('https://wikidth.net/truyen/su-tinh-nhung-dai-YhmIvTu2615a1j5G', 'new_book.pdf')
+#first we need to create the markdown file
+convert_md('https://wikidth.net/truyen/ngan-YajGoFS4CFlEsj7n', "sample_md.md")
+#create the PDF file
+convert_pdf("sample_md.md", 'sample_pdf.pdf')
+#create the EPUB file
+convert_epub("sample_md.md", "sample_epub.epub")
 ```
 
 After running the code, a new pdf file called "new_book.pdf" will appear in your current directory.
